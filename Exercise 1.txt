@@ -1,0 +1,45 @@
+1.) Encapsulation
+This allows to define which of a classes methods are hidden from external usage.
+It's especially good to work with when you need to simplify code within an 
+accessible (or public) method, which can then call the private method. E.g.
+
+public class bike(){
+...
+	public void method(){
+		...
+		simplifiedCode();
+	} 
+
+	private void simplifiedCode(){
+		...
+	}
+}
+
+Here, method() can be called externally to do something such as give energy to a 
+bike, then the simplified code can decide the speed of the bike under this 
+provision of energy.
+
+2.) Inheritance
+This allows a class to be further specialised into a subclass. A subclass inherits
+all attributes of a parent class while adding their own. So returning to the bike 
+example, a mountain bike class could be a subclass of the bike class where frame
+size, speed, weight can all be inherited from the parent class whilst adding other 
+attributes such as suspension and gears which may not be found in a separate child
+fixey road bike class.
+
+3.) Polymorphism
+This allows a behaviour of a method to be invoked differently depending on the 
+conditions presented. Overriding polymorphism is when a subclass overrides the
+inherited method, such as setting the speed on the mountain bike class, this will 
+depend on gears which the parent class bike does not have, thus behaving slightly
+differently. Parametric polymorphism does not involve the class heirachy, it is a
+function that is defined several times with different arguments such as an add 
+function that can either add two numbers or concatenate two strings.
+
+4.) Abstraction
+This allows a program to have its layers of complexity to be arranged separately.
+For example, the speed of a bike can be abstracted away from its motion on a 
+plane, the speed can be dealt with by another part of the program which defines the
+road surface calculates the overall motion of the bike on this plane. 
+
+ 
